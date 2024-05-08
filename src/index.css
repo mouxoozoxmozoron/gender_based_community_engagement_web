@@ -1,13 +1,475 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* body {
+color: white;
+top: 0;
+background-color: black;
+}
+/* For large screens */
+@media (min-width: 768px) {
+.large-icon {
+font-size: 50px;
+}
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* For small screens */
+@media (max-width: 767px) {
+.small_icon {
+font-size: 10px;
 }
+}
+
+
+/* buttons styling */
+.nav_link_buttons_home {
+padding: 10px;
+color: white;
+border: 2px solid;
+border: none;
+background-color: rgb(53, 51, 51);
+text-decoration: none;
+border-radius: 4px;
+}
+
+/* nav bar styles */
+.main_nav_bar {
+background-color: white;
+position: fixed;
+top: 0;
+width: 100%;
+height: 4.5rem;
+align-items: center;
+border-bottom: 1px solid gray;
+z-index: 1000; /* Ensure the navigation bar stays on top */
+}
+
+.nav_bar_container {
+padding: 10px;
+margin-top: 10px;
+}
+.left_nav_bar_col {
+margin-left: 40%;
+justify-content: space-evenly;
+align-items: center;
+}
+.logo_nav_bar {
+margin-left: -0.5rem;
+}
+.left_nav_bar_col > NavLink {
+text-decoration: none;
+}
+.content {
+margin-top: 4rem;
+}
+
+.home_card {
+border-color: red;
+padding: 20px;
+}
+.card_image {
+width: 300px;
+height: 300px;
+}
+.home_section {
+background-image: url("../src/assets/background_images/bg1.jpg");
+background-size: cover; /* Cover the entire element */
+background-position: center; /* Center the background image */
+background-repeat: no-repeat; /* Prevent repeating of the background image */
+/* Optionally, you can set a background color */
+background-color: #f0f0f0;
+}
+
+/* login form and page styles */
+.form_section {
+place-items: center;
+margin-top: 4rem;
+display: grid;
+background-image: url("../src/assets/background_images/bg1.jpg");
+background-size: cover; /* Cover the entire element */
+background-position: center; /* Center the background image */
+background-repeat: no-repeat; /* Prevent repeating of the background image */
+/* Optionally, you can set a background color */
+background-color: #f0f0f0;
+}
+.form_body {
+margin-bottom: 20px;
+margin-top: 20px;
+padding: 10px;
+background-color: white;
+color: black;
+width: 50%;
+border-radius: 4px;
+}
+
+/* icons styling */
+.icon_style_profile {
+height: 30px;
+width: 30px;
+margin-left: -2rem;
+
+background-color: white;
+border-radius: 50%;
+/* color: white; */
+}
+.icon_style_notification {
+height: 30px;
+width: 30px;
+margin-right: -2rem;
+
+background-color: white;
+border-radius: 50%;
+}
+/* .notification_badge{
+position: absolute;
+top: -5;
+right: -5;
+background-color: red;
+color: white;
+border-radius: 50%;
+padding: 5px;
+height: 25px;
+width: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+} */
+.icon_style_footer {
+height: 30px;
+width: 30px;
+}
+
+.icon_style_logo {
+height: 40px;
+width: 40px;
+
+background-color: white;
+border-radius: 50%;
+}
+
+/* footer styling */
+.main_footer {
+/* background-color: black; */
+color: grey;
+background-image: url("../src/assets/background_images/bg1.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-color: #f0f0f0;
+}
+.ffoter_body {
+margin: 5px;
+padding: 10px;
+}
+
+/* styles for post page */
+.post_page{
+
+/* background-image: url("../src/assets/background_images/bg1.jpg"); */
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-color: #f0f0f0;
+}
+.post_card{
+padding: 10px;
+/* margin-top: 1rem;
+margin-bottom: 1rem; */
+margin: 5px;
+}
+.logedname{
+color: black;
+}
+
+/* styles for the group header */
+.group_header{
+margin-top: 4rem;
+display: flex;
+justify-content: space-around;
+padding: 4px;
+background-color: black;
+opacity: 0.9;
+align-items: center;
+height: 3rem;
+/* position: fixed; */
+width: 100%;
+}
+.main_screen_nav{
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 5rem;
+}
+.main_screen_nav>h4{
+font-family: sans-serif;
+font-size: 18px;
+}
+.group_header_nav{
+text-decoration: none;
+
+}
+.group_header_nav:hover{
+text-decoration: underline 2px solid white;
+}
+
+/* Styles for group side nav bar */
+.group_side_bar {
+display: flex;
+
+}
+
+/* .group_side_bar_nav {
+background-color: rgb(27, 25, 25);
+color: white;
+padding: 4px;
+width: fit-content;
+top: 7rem;
+bottom: 3rem;
+overflow-y: auto;
+} */
+
+/*
+NEW STYLES */
+/* Sidebar styles */
+.group_side_bar_nav {
+background-color: rgb(27, 25, 25);
+color: white;
+padding: 4px;
+width: fit-content;
+top: 7rem;
+bottom: 3rem;
+overflow-y: auto;
+display: none; 
+}
+
+/* Show sidebar when the 'show' class is applied */
+.group_side_bar_nav.show {
+display: block;
+}
+
+
+/* Show sidebar on large screens */
+@media screen and (min-width: 769px) {
+.group_side_bar_nav {
+display: block; /* Show sidebar on large screens */
+}
+.side_bar_menu_controller{
+display: none;
+}
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+.group_side_bar_nav {
+display: none; /* Hide sidebar on small screens by default */
+}
+}
+/* END OF NEW STYLES */
+
+
+
+.group_side_bar_nav ul {
+list-style: none;
+padding: 0;
+}
+
+.group_side_bar_nav ul li {
+display: block; /* Display list items as block */
+padding: 8px 16px; /* Adjust padding as needed */
+}
+
+
+.group_side_bar_cont_holder {
+/* Fill remaining width */
+flex: 1;
+bottom: 0;
+background-color: black;
+color: white;
+padding-left: 4px; /* Adjust to account for sidebar width */
+/* Ensure content starts after the sidebar */
+}
+
+.group_side_bar_content {
+margin: 10px;
+
+}
+
+/* Style the content area */
+.group_side_bar_content h4 {
+margin-top: 0;
+font-size: 18px;
+}
+.group_side_bar_content p {
+margin-top: 0.5rem;
+}
+
+.content_cards{
+
+max-width: 270px;
+margin: 10px;
+border-radius: 2px;
+}
+
+
+
+
+
+
+
+/* CSS styles for the card */
+.content_cards {
+border: none; /* Example color */
+}
+
+/* CSS styles for the card body */
+.second_card {
+/* Set padding */
+padding: 20px;
+background-color: rgb(27, 25, 25);
+border: none;
+}
+
+/* CSS styles for the card title */
+.second_card .card-title {
+/* Set color */
+color: white; /* Example color */
+border-bottom: 1px solid grey;
+}
+
+/* CSS styles for the card text */
+.second_card .card-text {
+/* Set color */
+color: white; /* Example color */
+}
+
+/* group dynamic content body styles */
+.dynamic_group_page{
+margin: 10px;
+}
+.side_nav_link{
+text-decoration: none;
+color: white;
+cursor: pointer;
+}
+.side_nav_link:hover{
+text-decoration: underline 2px solid white;
+}
+
+.link_activenes{
+text-decoration: underline 2px solid white;
+}
+
+/* Side bar profile section */
+.group_side_bar_profile {
+display: flex;
+align-items: center; /* Center items vertically */
+height: fit-content;
+border-bottom: 1px solid white;
+}
+
+.group_side_bar_profile_image {
+background-color: rgb(27, 25, 25);
+border-radius: 50%;
+border: 1px solid white;
+height: 40px;
+width: 40px;
+display: flex;
+align-items: center; /* Center content horizontally */
+justify-content: center; /* Center content vertically */
+margin-bottom: 8px;
+}
+
+.group_side_bar_profile_image svg {
+color: white; /* Adjust color of the icon */
+}
+
+.group_side_bar_profile_text {
+margin-left: 10px; /* Adjust spacing between image and text */
+}
+
+.group_side_bar_profile h6,
+.group_side_bar_profile p {
+margin: 0; /* Remove default margins */
+font-size: 0.8rem; /* Adjust font size as needed */
+}
+.group_side_bar_profile_infor{
+margin-left: 4px;
+}
+
+
+.group_side_bar_profile_more{
+cursor: pointer;
+padding: 2px;
+position: relative;
+}
+
+
+
+
+/* Group side bar profile more content container */
+.group_side_bar_profile_mor_cont {
+position: absolute; /* Position content absolutely */
+/* Position content below the more icon */
+/* top: calc(100% + 5px); */
+margin-top: 5rem;
+left: 17%; /* Position content centered horizontally */
+transform: translateX(-50%); /* Center content horizontally */
+background-color: rgb(27, 25, 25);
+
+border-radius: 2px; /* Border radius */
+box-shadow: 0 2px 4px black; /* Box shadow */
+padding: 4px; /* Padding */
+display: none; /* Initially hide the content */
+z-index: 1000;
+}
+
+/* Show more content when more icon is clicked */
+/* .group_side_bar_profile_more:hover + .group_side_bar_profile_mor_cont,
+.group_side_bar_profile_mor_cont:hover {
+display: block;
+} */
+
+
+.group_side_bar_profile_mor_cont_visible{
+position: absolute; /* Position content absolutely */
+/* Position content below the more icon */
+/* top: calc(100% + 5px); */
+margin-top: 13rem;
+left: 17%; /* Position content centered horizontally */
+transform: translateX(-50%); /* Center content horizontally */
+background-color: rgb(27, 25, 25);
+position: fixed-top;
+border-radius: 2px; /* Border radius */
+box-shadow: 0 2px 4px black; /* Box shadow */
+padding: 4px; /* Padding */
+
+z-index: 100;
+}
+
+.group_posts_card{
+margin-top: 6px;
+max-width: 600px;
+max-height: 800px;
+border: none;
+
+}
+/* .group_post_image{
+    width: 240px;
+} */
+
+.group_posts_page {
+    display: flex;
+
+justify-content: space-evenly;
+flex-direction: row;
+align-items: flex-start;
+
+  }
+
+  .event_description{
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .booking_loading{
+    max-width: 8px;
+    max-height: 8px;
+  }
