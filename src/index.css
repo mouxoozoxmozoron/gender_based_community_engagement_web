@@ -473,3 +473,6 @@ align-items: flex-start;
     max-width: 8px;
     max-height: 8px;
   }
+  .event_description{
+    display: flex;
+  }

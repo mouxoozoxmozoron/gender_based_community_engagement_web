@@ -14,6 +14,7 @@ const [loading, setLoading] = useState(true);
 const [error, setError] = useState(null);
 const [Ticket, setTicket]=useState(null);
 
+console.log('event id to book' + event_id);
 
 useEffect(() => {
 const fetchDataAndSetData = async () => {

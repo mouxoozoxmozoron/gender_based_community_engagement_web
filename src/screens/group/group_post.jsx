@@ -18,6 +18,7 @@ import { AiOutlineLike } from "react-icons/ai";
 import { CgMoreVerticalO } from "react-icons/cg";
 import { Text_slicer } from "../../utilis/text_slicer";
 import { MdImageNotSupported } from "react-icons/md";
+import { base_url } from "../../utilis/apiv1/end_point";
 
 
 
@@ -32,8 +33,9 @@ return (
                 {item.group.posts && item.group.posts.map((post, postIndex) => (
                 // Card content
                 <Card key={postIndex} className="group_posts_card">
-                    <Card.Img className="group_post_image" variant="top"
-                        src={`http://127.0.0.1:8000/storage/${post.post_image}`} alt='..'  />
+                    <Card.Img className="group_post_image" variant="top" src={`${base_url}storage/${post.post_image}`}
+                        alt='..' />
+
                     <Card.Body>
                         <Card.Title>{post.title}</Card.Title>
                         <Card.Text>

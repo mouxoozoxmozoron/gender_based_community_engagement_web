@@ -21,6 +21,7 @@ import Posts, {loader as PostDataloader} from "./screens/posts/posts";
 import MainLayOut from "./lay_out/main_lay_out";
 import Notification from "./screens/notifications";
 import Post_details from "./screens/posts/post_details";
+import Event_details from "./screens/posts/event_details";
 import Grou_lay_out, {loader as Group_home_loader} from "./componnent/group_lay_out";
 import Group_post from "./screens/group/group_post";
 import Group_events from "./screens/group/group_events";
@@ -39,6 +40,8 @@ const AppRoutes = createBrowserRouter(
       <Route path="/login" element={<LoginScreen />} action={Login_action} />
       <Route path="/posts" element={<Posts />} loader={PostDataloader} />
       <Route path="/posts/:id" element={<Post_details />} />
+      <Route path="/event/:id" element={<Event_details />} />
+
       <Route path="/group" element={<Grou_lay_out />}  >
       <Route path="posts" element={<Group_post />} />
       <Route path="events" element={<Group_events />} >

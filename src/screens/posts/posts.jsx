@@ -24,6 +24,7 @@ import {
 import { MdComment } from "react-icons/md";
 import { AiOutlineLike } from "react-icons/ai";
 import { CgMoreVerticalO } from "react-icons/cg";
+import { base_url } from "../../utilis/apiv1/end_point";
 
 export async function loader({ request }) {
   //   await RequireAuth({ request });
@@ -95,7 +96,7 @@ function Posts() {
                   <MDBCard className="h-100 post_card">
                   <MDBCardTitle>{post.title}</MDBCardTitle>
                     <MDBCardImage
-                      src={`http://127.0.0.1:8000/storage/${post.post_image}`}
+                      src={`${base_url}storage/${post.post_image}`}
                       alt="..."
                       position="top"
                     />
