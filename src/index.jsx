@@ -16,6 +16,7 @@ import {
 } from "react-router-dom";
 import HomeScreen from "./screens/main_screen";
 import LoginScreen, { Action as Login_action } from "./screens/login_screen";
+import RegisterScreen, { Action as Register_action } from "./screens/register_screen";
 import Posts, {loader as PostDataloader} from "./screens/posts/posts";
 
 import MainLayOut from "./lay_out/main_lay_out";
@@ -38,6 +39,8 @@ const AppRoutes = createBrowserRouter(
       <Route path="/" element={<HomeScreen />} />
       <Route path="/notifications" element={<Notification />} />
       <Route path="/login" element={<LoginScreen />} action={Login_action} />
+      <Route path="/register" element={<RegisterScreen />} action={Register_action} />
+
       <Route path="/posts" element={<Posts />} loader={PostDataloader} />
       <Route path="/posts/:id" element={<Post_details />} />
       <Route path="/event/:id" element={<Event_details />} />

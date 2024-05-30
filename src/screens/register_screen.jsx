@@ -58,7 +58,7 @@ export async function Action({ request }) {
   }
 }
 
-function LoginScreen() {
+function RegisterScreen() {
   const [login_message, setlogin_message] = useSearchParams();
   const message = useLoaderData();
   const navifation_infor = useNavigation();
@@ -71,8 +71,47 @@ function LoginScreen() {
       <center>
         <Form className="form" method="post">
       
-          <h3>Login</h3>
+          <h3>Register</h3>
           {error && <h4 className="error_message">{error}</h4>}
+
+          <section>
+            <h3>FIrst Name</h3> <br />
+            <input
+              type="text"
+              name="first_name"
+              placeholder="First Nmae"
+              required
+            />
+          </section>
+
+          <section>
+            <h3>Last Name</h3> <br />
+            <input
+              type="text"
+              name="last_name"
+              placeholder="Last Name"
+              required
+            />
+          </section>
+
+      <section>
+    <h3>Gender</h3> <br />
+    <select className="select" name="gender" required>
+        <option className="option" value="" disabled selected>Select Gender</option>
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+    </select>
+</section>
+
+          <section>
+            <h3>Phone</h3> <br />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone NUmber"
+              required
+            />
+          </section>
 
           <section>
             <h3>Email</h3> <br />
@@ -92,12 +131,21 @@ function LoginScreen() {
               required
             />
           </section>
+          <section>
+            <h3>Conferm Password</h3> <br />
+            <input
+              type="password"
+              name="conferm_pasword"
+              placeholder="Conferm pasword"
+              required
+            />
+          </section>
           <br />
           <div className="form_buttons">
             <Button variant="success" type="submit">
               Login
             </Button>
-            <NavLink to="/register">Dont have an account?</NavLink>
+            <NavLink to="/login">Already a member? login</NavLink>
           </div>
        
         </Form>
@@ -106,4 +154,4 @@ function LoginScreen() {
     </div>
   );
 }
-export default LoginScreen;
+export default RegisterScreen;

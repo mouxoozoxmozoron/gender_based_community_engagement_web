@@ -95,8 +95,38 @@ margin-top: 20px;
 padding: 10px;
 background-color: white;
 color: black;
-width: 50%;
+width: fit-content;
 border-radius: 4px;
+}
+.form > section>input{
+min-height: 3rem;
+min-width: 10rem;
+}
+.select{
+min-height: 3rem;
+min-width: 10rem;
+}
+.select>option {
+  font-size: 16px; /* Increase font size */
+  padding: 10px; /* Add padding for better readability */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.form > section>h3{
+font-size: 16px;
+align-items: last baseline;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.form >h3{
+font-size: 26px;
+color: grey;
+box-shadow: #f0f0f0;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.form >h4{
+font-size: 16px;
+color: red;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* icons styling */

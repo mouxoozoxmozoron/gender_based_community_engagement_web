@@ -31,7 +31,9 @@ function MainHeader() {
                 src={app_icon}
                 alt="Notifications"
                 className="icon_style_logo"
-              />
+              />  
+              
+              GBBC
 
             </NavLink>
 
@@ -51,12 +53,12 @@ function MainHeader() {
                 alt="LOGIN"
                 className="icon_style_profile"
               /> */}
-              <CgProfile  size={40} color="grey"/> 
+              {/* <CgProfile  size={40} color="grey"/>  */}
 
 
             </NavLink> {""}
 
-            <NavLink
+            {/* <NavLink
               to="/notifications"
               className={({ isActive }) =>
                 isActive ? "active_link_status" : ""
@@ -83,7 +85,7 @@ function MainHeader() {
           5
         </span>
       </div>
-            </NavLink>
+            </NavLink> */}
           </Col>
         </Row>
       </Container>
